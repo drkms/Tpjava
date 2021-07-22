@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.java.AppforDocker.modele.Personne;
 
 @Controller
-public class controller {
+public class PersonController {
 
 	Logger log=LoggerFactory.getLogger(getClass());
 	
@@ -30,7 +30,7 @@ public class controller {
 	public String afficherAllAssures(Personne person, Model model) {
 		
 		
-		String message="Bonjour " + person.getNom() + " Vous êtes bien matinal ";
+		String message="Bonjour " + person.getNom() +  " "+ person.getPrenom() + " Vous êtes bien matinal ";
 		
 		person.setMessage(message);
 		model.addAttribute("person", person);
